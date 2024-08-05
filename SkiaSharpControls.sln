@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApp", "Com.Igniscor.SampleProject\SampleApp.csproj", "{199C174B-2344-46E0-8C40-044058598709}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DonutChartControl", "Com.Igniscor.Controls\DonutChartControl\DonutChartControl.csproj", "{535D2D48-253C-41EF-BFB7-70D8B8FC796E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgressBarControl", "Com.Igniscor.Controls\ProgressBarControl\ProgressBarControl.csproj", "{B96412A1-0890-4AF7-9CAB-8C6CB91C9AE7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helpers", "Com.Igniscor.Controls\Helpers\Helpers.csproj", "{7FEEDC18-9CAA-40EC-9560-0C19DA3DE5E1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadialProgressBarControl", "Com.Igniscor.Controls\RadialProgressBarControl\RadialProgressBarControl.csproj", "{F5D6D19A-A844-493F-AB9A-0C6D3BE434A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{199C174B-2344-46E0-8C40-044058598709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{199C174B-2344-46E0-8C40-044058598709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{199C174B-2344-46E0-8C40-044058598709}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{199C174B-2344-46E0-8C40-044058598709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{199C174B-2344-46E0-8C40-044058598709}.Release|Any CPU.Build.0 = Release|Any CPU
+		{199C174B-2344-46E0-8C40-044058598709}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{535D2D48-253C-41EF-BFB7-70D8B8FC796E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{535D2D48-253C-41EF-BFB7-70D8B8FC796E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{535D2D48-253C-41EF-BFB7-70D8B8FC796E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{535D2D48-253C-41EF-BFB7-70D8B8FC796E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B96412A1-0890-4AF7-9CAB-8C6CB91C9AE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B96412A1-0890-4AF7-9CAB-8C6CB91C9AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B96412A1-0890-4AF7-9CAB-8C6CB91C9AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B96412A1-0890-4AF7-9CAB-8C6CB91C9AE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FEEDC18-9CAA-40EC-9560-0C19DA3DE5E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FEEDC18-9CAA-40EC-9560-0C19DA3DE5E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FEEDC18-9CAA-40EC-9560-0C19DA3DE5E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FEEDC18-9CAA-40EC-9560-0C19DA3DE5E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5D6D19A-A844-493F-AB9A-0C6D3BE434A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5D6D19A-A844-493F-AB9A-0C6D3BE434A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5D6D19A-A844-493F-AB9A-0C6D3BE434A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5D6D19A-A844-493F-AB9A-0C6D3BE434A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27D51706-89D3-4202-89C1-E5417932668F}
+	EndGlobalSection
+EndGlobal

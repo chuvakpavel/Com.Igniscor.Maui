@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:support1="clr-namespace:SkiaSharpControls.Views.Support"
+    x:Class="SkiaSharpControls.Views.Support.SliderControlPropertyView"
+    x:Name="View">
+    <ContentView.Resources>
+
+        <Style x:Key="LocalHintLabelStyle" TargetType="Label">
+
+            <Setter Property="TextColor" Value="{StaticResource PrimaryDarkText}" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="VerticalOptions" Value="Center" />
+        </Style>
+
+        <Style x:Key="LocalSliderStyle" TargetType="Slider">
+
+            <Setter Property="ThumbColor" Value="{StaticResource Secondary}" />
+            <Setter Property="MinimumTrackColor" Value="{StaticResource PrimaryDarkText}" />
+            <Setter Property="MaximumTrackColor" Value="{StaticResource PrimaryDarkText}" />
+            <Setter Property="VerticalOptions" Value="Center" />
+        </Style>
+    </ContentView.Resources>
+
+    <ContentView.Content>
+
+        <support1:BaseControlPropertyView Title="{Binding Source={x:Reference View}, Path=Title}">
+            <support1:BaseControlPropertyView.InnerView>
+
+                <Grid
+                    ColumnDefinitions="Auto,*,Auto"
+                    ColumnSpacing="0">
+
+                    <Label
+                        Style="{StaticResource LocalHintLabelStyle}"
+                        Text="{Binding Source={x:Reference View}, Path=Minimum}"
+                        HorizontalOptions="Start"
+                        Grid.Column="0" />
+
+                    <Slider
+                        Style="{StaticResource LocalSliderStyle}"
+                        Value="{Binding Source={x:Reference View}, Path=Value}"
+                        Maximum="{Binding Source={x:Reference View}, Path=Maximum}"
+                        Minimum="{Binding Source={x:Reference View}, Path=Minimum}"
+                        Grid.Column="1" />
+
+                    <Label
+                        Style="{StaticResource LocalHintLabelStyle}"
+                        Text="{Binding Source={x:Reference View}, Path=Maximum}"
+                        HorizontalOptions="End"
+                        Grid.Column="2" />
+                </Grid>
+            </support1:BaseControlPropertyView.InnerView>
+        </support1:BaseControlPropertyView>
+    </ContentView.Content>
+</ContentView>

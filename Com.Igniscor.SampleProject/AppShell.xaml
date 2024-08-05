@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Shell
+    x:Class="SkiaSharpControls.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:radialProgressBar="clr-namespace:SkiaSharpControls.Views.ControlViews.RadialProgressBar"
+    xmlns:progressBar="clr-namespace:SkiaSharpControls.Views.ControlViews.ProgressBar"
+    xmlns:donutChart="clr-namespace:SkiaSharpControls.Views.ControlViews.DonutChart"
+    xmlns:helpers="clr-namespace:SkiaSharpControls.Helpers"
+    FlyoutBehavior="Disabled"
+    Title="SkiaSharpControls">
+
+    <TabBar>
+        <Tab
+            Icon="{x:Static helpers:Constants+Images.RadialProgressBar}"
+            Title="{x:Static helpers:Constants+Texts.RadialProgressBars}"
+            Route="RadialProgressBars">
+
+            <ShellContent ContentTemplate="{DataTemplate radialProgressBar:GradientRadialProgressBarNavigationPage}" />
+        </Tab>
+        <Tab
+            Icon="{x:Static helpers:Constants+Images.ProgressBar}"
+            Title="{x:Static helpers:Constants+Texts.ProgressBars}"
+            Route="RadialProgressBars">
+            
+            <ShellContent ContentTemplate="{DataTemplate progressBar:GradientProgressBarNavigationPage}" />
+        </Tab>
+        <Tab
+            Icon="{x:Static helpers:Constants+Images.DonutChart}"
+            Title="{x:Static helpers:Constants+Texts.DonutCharts}"
+            Route="RadialProgressBars">
+           
+            <ShellContent ContentTemplate="{DataTemplate donutChart:DonutChartNavigationPage}" />
+        </Tab>
+    </TabBar>
+</Shell>

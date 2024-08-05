@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:DataType="viewModels:GradientProgressBarViewModel"
+    xmlns:helpers="clr-namespace:SkiaSharpControls.Helpers"
+    xmlns:progressBarControl="clr-namespace:ProgressBarControl;assembly=ProgressBarControl"
+    xmlns:viewModels="clr-namespace:SkiaSharpControls.ViewModels"
+    xmlns:support1="clr-namespace:SkiaSharpControls.Views.Support"
+    x:Class="SkiaSharpControls.Views.ControlViews.ProgressBar.GradientProgressBarVariant2Page"
+    Title="{x:Static helpers:Constants+Texts.VerticalProgressBarTitle}"
+    x:Name="Page">
+    <support1:ControlExperimentView>
+        <support1:ControlExperimentView.ControlPreviewView>
+
+            <Grid
+                x:Name="Container"
+                Padding="50,10"
+                ColumnSpacing="10"
+                ColumnDefinitions="*,*"
+                HorizontalOptions="Center">
+
+                <progressBarControl:DetailedGradientProgressBar
+                    Orientation="Vertical"
+                    PercentageValue="{Binding PercentageValue}"
+                    OuterCornerRadius="{Binding OuterCornerRadius}"
+                    InnerCornerRadius="{Binding InnerCornerRadius}"
+                    FontSize="{Binding FontSize}"
+                    PrimaryTextColor="Black"
+                    SecondaryTextColor="White"
+                    EndProgressColor="#E7FD8C"
+                    StartProgressColor="#91C035"
+                    EndBackgroundColor="#1D00FB"
+                    StartBackgroundColor="#FB0003"
+                    HorizontalOptions="Center"
+                    HeightRequest="{Binding Source={x:Reference Page}, 
+                                            Path=Width,
+                                            Converter={StaticResource MultiplicationByNumberConverter},
+                                            ConverterParameter=0.8}"
+                    WidthRequest="{Binding Source={x:Reference Page},
+                                           Path=Width,
+                                           Converter={StaticResource MultiplicationByNumberConverter},
+                                           ConverterParameter=0.35}"
+                    Grid.Column="0" />
+
+                <progressBarControl:GradientProgressBar
+                    Orientation="Vertical"
+                    PercentageValue="{Binding PercentageValue}"
+                    OuterCornerRadius="{Binding OuterCornerRadius}"
+                    InnerCornerRadius="{Binding InnerCornerRadius}"
+                    EndProgressColor="#E7FD8C"
+                    StartProgressColor="#91C035"
+                    EndBackgroundColor="#1D00FB"
+                    StartBackgroundColor="#FB0003"
+                    HorizontalOptions="Center"
+                    HeightRequest="{Binding Source={x:Reference Page}, 
+                                            Path=Width,
+                                           Converter={StaticResource MultiplicationByNumberConverter},
+                                           ConverterParameter=0.8}"
+                    WidthRequest="{Binding Source={x:Reference Page},
+                                           Path=Width,
+                                           Converter={StaticResource MultiplicationByNumberConverter},
+                                           ConverterParameter=0.35}"
+                    Grid.Column="1" />
+            </Grid>
+        </support1:ControlExperimentView.ControlPreviewView>
+
+        <support1:ControlExperimentView.ControlPropertiesView>
+
+            <support1:SliderControlPropertyView
+                Title="PercentageValue"
+                Value="{Binding PercentageValue}"
+                Minimum="0"
+                Maximum="1" />
+        </support1:ControlExperimentView.ControlPropertiesView>
+    </support1:ControlExperimentView>
+</ContentPage>

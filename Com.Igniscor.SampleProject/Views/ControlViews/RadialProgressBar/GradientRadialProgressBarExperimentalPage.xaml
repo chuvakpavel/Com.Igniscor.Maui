@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:radialProgressBarControl="clr-namespace:RadialProgressBarControl;assembly=RadialProgressBarControl"
+    xmlns:helpers="clr-namespace:SkiaSharpControls.Helpers"
+    xmlns:viewModels="clr-namespace:SkiaSharpControls.ViewModels"
+    xmlns:support1="clr-namespace:SkiaSharpControls.Views.Support"
+    x:Class="SkiaSharpControls.Views.ControlViews.RadialProgressBar.GradientRadialProgressBarExperimentalPage"
+    x:Name="Page"
+    x:DataType="viewModels:GradientRadialProgressBarViewModel"
+    Title="{x:Static helpers:Constants+Texts.Experiment}">
+
+    <support1:ControlExperimentView>
+        <support1:ControlExperimentView.ControlPreviewView>
+
+            <Grid Margin="30"
+                  x:Name="Container">
+
+                <radialProgressBarControl:RadialProgressBar
+                    SweepAngle="{Binding SweepAngle}"
+                    StartAngle="{Binding StartAngle}"
+                    PercentageValue="{Binding PercentageValue}"
+                    BarWidth="{Binding BarWidth}"
+                    StartColor="#E7FD8C"
+                    EndColor="#91C035"
+                    StartBackgroundColor="#FB0003"
+                    EndBackgroundColor="#1D00FB"
+                    WidthRequest="{Binding Source={x:Reference Container}, 
+                                           Path=Width}"
+                    HeightRequest="{Binding Source={x:Reference Container}, 
+                                            Path=Width}" />
+            </Grid>
+        </support1:ControlExperimentView.ControlPreviewView>
+        <support1:ControlExperimentView.ControlPropertiesView>
+
+            <Grid
+                RowSpacing="10"
+                RowDefinitions="Auto,Auto,Auto,Auto">
+
+                <support1:SliderControlPropertyView
+                    Title="PercentageValue"
+                    Value="{Binding PercentageValue}"
+                    Minimum="0"
+                    Maximum="1"
+                    Grid.Row="0" />
+
+                <support1:SliderControlPropertyView
+                    Title="BarWidth"
+                    Value="{Binding BarWidth}"
+                    Minimum="0"
+                    Maximum="{Binding  Source={x:Reference Container}, 
+                                       Path=Width, 
+                                       Converter={StaticResource MultiplicationByNumberConverter}, 
+                                       ConverterParameter=0.5}"
+                    Grid.Row="1" />
+
+                <support1:SliderControlPropertyView
+                    Title="StartAngle"
+                    Value="{Binding StartAngle}"
+                    Minimum="0"
+                    Maximum="360"
+                    Grid.Row="2" />
+
+                <support1:SliderControlPropertyView
+                    Title="SweepAngle"
+                    Value="{Binding SweepAngle}"
+                    Minimum="0"
+                    Maximum="360"
+                    Grid.Row="3" />
+            </Grid>
+        </support1:ControlExperimentView.ControlPropertiesView>
+    </support1:ControlExperimentView>
+</ContentPage>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:SkiaSharpControls.Helpers"
+    xmlns:progressBarControl="clr-namespace:ProgressBarControl;assembly=ProgressBarControl"
+    xmlns:viewModels="clr-namespace:SkiaSharpControls.ViewModels"
+    xmlns:support1="clr-namespace:SkiaSharpControls.Views.Support"
+    x:DataType="viewModels:GradientProgressBarViewModel"
+    x:Class="SkiaSharpControls.Views.ControlViews.ProgressBar.GradientProgressBarVariant1Page"
+    Title="{x:Static helpers:Constants+Texts.HorizontalProgressBarTitle}">
+
+    <support1:ControlExperimentView>
+        <support1:ControlExperimentView.ControlPreviewView>
+
+            <Grid
+                VerticalOptions="Center"
+                Margin="10"
+                RowSpacing="10"
+                RowDefinitions="*,*">
+
+                <progressBarControl:DetailedGradientProgressBar
+                    Orientation="Horizontal"
+                    PercentageValue="{Binding PercentageValue}"
+                    OuterCornerRadius="{Binding OuterCornerRadius}"
+                    InnerCornerRadius="{Binding InnerCornerRadius}"
+                    FontSize="{Binding FontSize}"
+                    PrimaryTextColor="Black"
+                    SecondaryTextColor="White"
+                    StartProgressColor="#E7FD8C"
+                    EndProgressColor="#91C035"
+                    StartBackgroundColor="#1D00FB"
+                    EndBackgroundColor="#FB0003"
+                    HeightRequest="100"
+                    Grid.Row="0" />
+
+                <progressBarControl:GradientProgressBar
+                    Orientation="Horizontal"
+                    PercentageValue="{Binding PercentageValue}"
+                    OuterCornerRadius="{Binding OuterCornerRadius}"
+                    InnerCornerRadius="{Binding InnerCornerRadius}"
+                    StartProgressColor="#E7FD8C"
+                    EndProgressColor="#91C035"
+                    StartBackgroundColor="#1D00FB"
+                    EndBackgroundColor="#FB0003"
+                    HeightRequest="100"
+                    Grid.Row="1" />
+            </Grid>
+        </support1:ControlExperimentView.ControlPreviewView>
+
+        <support1:ControlExperimentView.ControlPropertiesView>
+
+            <support1:SliderControlPropertyView
+                Title="PercentageValue"
+                Value="{Binding PercentageValue}"
+                Minimum="0"
+                Maximum="1" />
+        </support1:ControlExperimentView.ControlPropertiesView>
+    </support1:ControlExperimentView>
+</ContentPage>

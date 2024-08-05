@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:SkiaSharpControls.Helpers"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:viewModels="clr-namespace:SkiaSharpControls.ViewModels"
+    xmlns:support1="clr-namespace:SkiaSharpControls.Views.Support"
+    x:Class="SkiaSharpControls.Views.ControlViews.RadialProgressBar.GradientRadialProgressBarNavigationPage"
+    x:DataType="viewModels:GradientRadialProgressBarNavigationViewModel"
+    Title="{x:Static helpers:Constants+Texts.RadialProgressBars}">
+
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Primary}" />
+    </ContentPage.Behaviors>
+
+    <support1:NavigationButtonListView
+        ItemsSource="{Binding Items}"
+        Command="{Binding GoToCommand}" />
+</ContentPage>

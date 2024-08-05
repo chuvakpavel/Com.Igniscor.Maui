@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:SkiaSharpControls.Helpers"
+    xmlns:radialProgressBarControl="clr-namespace:RadialProgressBarControl;assembly=RadialProgressBarControl"
+    xmlns:viewModels1="clr-namespace:SkiaSharpControls.ViewModels"
+    xmlns:support1="clr-namespace:SkiaSharpControls.Views.Support"
+    x:DataType="viewModels1:GradientRadialProgressBarViewModel"
+    x:Class="SkiaSharpControls.Views.ControlViews.RadialProgressBar.GradientRadialProgressBarVariant1Page"
+    Title="{x:Static helpers:Constants+Texts.RadialProgressBarTitle}">
+    
+    <support1:ControlExperimentView>
+        <support1:ControlExperimentView.ControlPreviewView>
+            
+            <Grid Margin="30"
+                  x:Name="Container">
+                
+                <radialProgressBarControl:RadialProgressBar
+                    x:Name="Bar"
+                    SweepAngle="360"
+                    StartAngle="0"
+                    PercentageValue="0.33"
+                    BarWidth="{Binding BarWidth}"
+                    StartColor="#E7FD8C"
+                    EndColor="#91C035"
+                    StartBackgroundColor="#FB0003"
+                    EndBackgroundColor="#1D00FB"
+                    WidthRequest="{Binding Source={x:Reference Container}, 
+                                           Path=Width}"
+                    HeightRequest="{Binding Source={x:Reference Container},
+                                            Path=Width}" />
+            </Grid>
+        </support1:ControlExperimentView.ControlPreviewView>
+    </support1:ControlExperimentView>
+</ContentPage>
