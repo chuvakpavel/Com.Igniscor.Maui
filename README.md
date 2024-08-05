@@ -18,7 +18,7 @@
 
 **Com.Igniscor.DonutChart.Maui** - is a cross platform plugin for Maui which allows you add donut chart with a wide range of customization options that can be shared across iOS and Android.
 
-![AndroidDonutChartdemo](https://github.com/chuvakpavel/Com.Igniscor.Maui/blob/main/WikiFiles/DonutChart/DonutChartExperimentAndroid.gif)
-![IOSDonutChartdemo](https://github.com/chuvakpavel/Com.Igniscor.Maui/blob/main/WikiFiles/DonutChart/DonutChartExperimentAndroidIOS.gif)
+![AndroidDonutChartdemo](https://github.com/chuvakpavel/Com.Igniscor.Maui/blob/main/WikiFiles/DonutChart/DonutChartExperementAndroid.gif)
+![IOSDonutChartdemo](https://github.com/chuvakpavel/Com.Igniscor.Maui/blob/main/WikiFiles/DonutChart/DonutChartExperementIOS.gif)
 
 ---
