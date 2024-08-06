@@ -14,19 +14,30 @@
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 		<PackageIcon>icon.png</PackageIcon>
-		<Description>Com.Igniscor.DonutChart.Maui - is a cross platform plugin for Maui which allows you add donut chart with a wide range of customization options that can be shared across iOS and Android.</Description>
+		<Description>Com.Igniscor.Maui.DonutChart - is a cross platform plugin for Maui which allows you add donut chart with a wide range of customization options that can be shared across iOS and Android.</Description>
 		<BaseOutputPath>D:\c#\Maui\Package</BaseOutputPath>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Version>1.0.0</Version>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<DocumentationFile>D:\c#\Maui\Package\Debug\net8.0-android\DonutChartControl.xml</DocumentationFile>
-		<Title>Com.Igniscor.DonutChart.Maui</Title>
+		<Title>Com.Igniscor.Maui.DonutChart</Title>
 		<Authors>Igniscor</Authors>
 		<Company>Igniscor</Company>
-		<PackageId>Com.Igniscor.DonutChart.Maui</PackageId>
+		<PackageId>Com.Igniscor.Maui.DonutChart</PackageId>
+		<IncludeSymbols>False</IncludeSymbols>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<PackageOutputPath>D:\c#\Maui\Packege\Release\DonutChart</PackageOutputPath>
+		<PackageTags>Android IOS Maui DonutChart SkiaSharp DonutChart</PackageTags>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/chuvakpavel/Com.Igniscor.Maui</RepositoryUrl>
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Include="..\..\..\Packege\Release\DonutChart\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	  <None Include="C:\Users\User\Downloads\icon.png">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
@@ -34,7 +45,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Helpers" Version="0.0.5" />
+		<PackageReference Include="Com.Igniscor.Maui.Helpers" Version="1.0.0" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.8" />
 	</ItemGroup>

@@ -21,13 +21,23 @@
 		<Version>1.0.0</Version>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
-		<PackageId>Com.Igniscor.RadialProgressBar.Maui</PackageId>
-		<Title>Com.Igniscor.RadialProgressBar.Maui</Title>
+		<PackageId>Com.Igniscor.Maui.RadialProgressBar</PackageId>
+		<Title>Com.Igniscor.Maui.RadialProgressBar</Title>
 		<Authors>Igniscor</Authors>
 		<Company>Igniscor</Company>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageOutputPath>D:\c#\Maui\Packege\Release\RadialProgressBar</PackageOutputPath>
+		<RepositoryUrl>https://github.com/chuvakpavel/Com.Igniscor.Maui</RepositoryUrl>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageTags>Android IOS Maui ProgressBar SkiaSharp Igniscor</PackageTags>
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Include="..\..\..\Packege\Release\RadialProgressBar\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	  <None Include="C:\Users\User\Downloads\icon.png">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>

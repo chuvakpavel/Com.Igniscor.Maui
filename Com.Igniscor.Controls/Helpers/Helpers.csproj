@@ -17,16 +17,26 @@
 		<Version>1.0.0</Version>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<DocumentationFile>D:\c#\Maui\Package\Debug\Debug\Helpers.xml</DocumentationFile>
-		<PackageId>Com.Igniscor.Helpers.Maui</PackageId>
-		<Title>Com.Igniscor.Helpers.Maui</Title>
+		<PackageId>Com.Igniscor.Maui.Helpers</PackageId>
+		<Title>Com.Igniscor.Maui.Helpers</Title>
 		<Authors>Igniscor</Authors>
 		<Company>Igniscor</Company>
 		<PackageIcon>icon.png</PackageIcon>
-		<Description>Com.Igniscor.Helpers.Maui - is a cross platform plugin for Maui which allows you simpli convert device independent units to pixels.</Description>
+		<Description>Com.Igniscor.Maui.Helpers - is a cross platform plugin for Maui which allows you easily convert device independent units to pixels.</Description>
 		<ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/chuvakpavel/Com.Igniscor.Maui</RepositoryUrl>
+		<PackageTags>Android IOS Maui DUI Pixels</PackageTags>
+		<PackageOutputPath>D:\c#\Maui\Packege\Release\Helpers</PackageOutputPath>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Include="..\..\..\Packege\Release\Helpers\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	  <None Include="C:\Users\User\Downloads\icon.png">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
